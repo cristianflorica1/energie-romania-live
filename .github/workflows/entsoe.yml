@@ -26,10 +26,13 @@ jobs:
           ENTSOE_TOKEN: ${{ secrets.ENTSOE_TOKEN }}
         run: python scripts/fetch_entsoe.py
 
+      - name: Fetch market data (consumenergie.ro + euenergy.live)
+        run: python scripts/fetch_market.py
+
       - name: Commit and push result
         run: |
           git config user.name "entsoe-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add entsoe-live.md
-          git diff --quiet --cached || git commit -m "update entsoe-live.md"
+          git add entsoe-live.md market-live.md
+          git diff --quiet --cached || git commit -m "update live data"
           git push
