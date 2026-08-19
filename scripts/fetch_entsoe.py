@@ -9,7 +9,6 @@ Ruleaza in GitHub Actions; ENTSOE_TOKEN vine din secrets.
 
 import os
 import re
-import sys
 from datetime import datetime, timedelta, timezone
 import xml.etree.ElementTree as ET
 
@@ -53,13 +52,14 @@ def entsoe_get(params, label):
         return None, "token invalid sau expirat"
 
     if r.status_code != 200:
-        return None, f"eroare HTTP {r.status_code} la {label}"
+        snippet = re.sub(r"\s+", " ", text)[:300]
+        return None, f"eroare HTTP {r.status_code} la {label}: {snippet}"
 
     if "Acknowledgement_MarketDocument" in text:
         m = re.search(r"<text>(.*?)</text>", text, re.S)
         msg = m.group(1).strip() if m else "eroare necunoscuta de la API"
         low = msg.lower()
-        if "security token" in low or "unauthorized" in low or "invalid" in low and "token" in low:
+        if "security token" in low or "unauthorized" in low or ("invalid" in low and "token" in low):
             return None, "token invalid sau expirat"
         return None, f"API eroare la {label}: {msg}"
 
@@ -82,8 +82,19 @@ def split_documents(xml_text):
     return docs
 
 
-def parse_latest_values(xml_text):
-    """Pentru A75 (actual) si A69/A18 (prognoza): ultimul punct per psrType."""
+ISO_DURATION_MIN = {
+    "PT15M": 15,
+    "PT30M": 30,
+    "PT60M": 60,
+    "PT1H": 60,
+}
+
+
+def parse_at_time(xml_text, target_dt):
+    """Pentru fiecare TimeSeries/Period, gaseste punctul (Point) a carui
+    fereastra de timp acopera target_dt. Daca nu exista exact, ia cel mai
+    apropiat punct anterior. Foloseste asta atat pentru actual cat si
+    pentru prognoza, ca sa comparam mereu aceeasi ora."""
     out = {}
     for root in split_documents(xml_text):
         for ts in root:
@@ -99,7 +110,22 @@ def parse_latest_values(xml_text):
             for period in ts:
                 if local(period.tag) != "Period":
                     continue
-                points = []
+                start_dt = None
+                resolution_min = None
+                for child in period:
+                    if local(child.tag) == "timeInterval":
+                        for c2 in child:
+                            if local(c2.tag) == "start":
+                                try:
+                                    start_dt = datetime.strptime(
+                                        c2.text, "%Y-%m-%dT%H:%MZ"
+                                    ).replace(tzinfo=timezone.utc)
+                                except ValueError:
+                                    pass
+                    elif local(child.tag) == "resolution":
+                        resolution_min = ISO_DURATION_MIN.get(child.text)
+
+                points = {}
                 for point in period:
                     if local(point.tag) != "Point":
                         continue
@@ -110,10 +136,23 @@ def parse_latest_values(xml_text):
                         elif local(c.tag) == "quantity":
                             qty = float(c.text)
                     if pos is not None and qty is not None:
-                        points.append((pos, qty))
-                if points:
-                    points.sort()
-                    out[psr] = points[-1][1]
+                        points[pos] = qty
+
+                if not points:
+                    continue
+
+                if start_dt is not None and resolution_min:
+                    target_pos = int((target_dt - start_dt).total_seconds() // 60 // resolution_min) + 1
+                    if target_pos in points:
+                        out[psr] = points[target_pos]
+                    else:
+                        earlier = [p for p in points if p <= target_pos]
+                        if earlier:
+                            out[psr] = points[max(earlier)]
+                        else:
+                            out[psr] = points[min(points)]
+                else:
+                    out[psr] = points[max(points)]
     return out
 
 
@@ -193,7 +232,6 @@ def main():
 
     status_notes = []
 
-    # Pasul 2: productie actuala (A75/A16)
     actual_xml, err = entsoe_get(
         {
             "documentType": "A75",
@@ -204,11 +242,10 @@ def main():
         },
         "productie actuala (A75)",
     )
-    actual_vals = parse_latest_values(actual_xml) if actual_xml else {}
+    actual_vals = parse_at_time(actual_xml, now) if actual_xml else {}
     if err:
         status_notes.append(f"pas 2 (actual): {err}")
 
-    # Pasul 3: prognoza (A69/A01), fallback A18
     forecast_xml, ferr = entsoe_get(
         {
             "documentType": "A69",
@@ -237,14 +274,12 @@ def main():
     elif ferr:
         status_notes.append(f"pas 3 (prognoza): {ferr}")
 
-    forecast_vals = parse_latest_values(forecast_xml) if forecast_xml else {}
+    forecast_vals = parse_at_time(forecast_xml, now) if forecast_xml else {}
 
-    # Pasul 5: UMM (A80/A16), fallback A77
     umm_xml, uerr = entsoe_get(
         {
             "documentType": "A80",
-            "processType": "A16",
-            "in_Domain": DOMAIN,
+            "biddingZone_Domain": DOMAIN,
             "periodStart": fmt_period(day_start),
             "periodEnd": fmt_period(umm_end),
         },
@@ -254,7 +289,7 @@ def main():
         umm_xml, uerr2 = entsoe_get(
             {
                 "documentType": "A77",
-                "in_Domain": DOMAIN,
+                "biddingZone_Domain": DOMAIN,
                 "periodStart": fmt_period(day_start),
                 "periodEnd": fmt_period(umm_end),
             },
@@ -269,7 +304,6 @@ def main():
 
     umm_items = parse_umm(umm_xml) if umm_xml else []
 
-    # token invalid oriunde -> semnaleaza explicit
     token_invalid = any("token invalid" in n for n in status_notes)
 
     ts_utc = now.strftime("%Y-%m-%d %H:%M UTC")
