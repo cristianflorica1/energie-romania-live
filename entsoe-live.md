@@ -1,10 +1,10 @@
-# ENTSO-E date live — actualizat: 2026-08-25 23:02 UTC (02:02 ora României)
+# ENTSO-E date live — actualizat: 2026-08-25 23:56 UTC (02:56 ora României)
 
-Eolian: actual N/A vs prognoză 992 MW
-Solar: actual N/A vs prognoză 1 MW
+Eolian: actual 1460 MW vs prognoză 938 MW (deviație +55.6%, presiune de scădere preț (actual peste prognoză))
+Solar: actual 0 MW vs prognoză 1 MW (deviație -100.0%, presiune de creștere preț (actual sub prognoză))
 
 PZU ora curentă: 181.92 EUR/MWh (ieri aceeași oră: 185.06 EUR/MWh)
 
 UMM nou (ultimele ~90 min): niciunul nou
 
-Status: eroare parțială — pas 2 (actual): eroare retea la productie actuala (A75): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30)
+Status: OK
