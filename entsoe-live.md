@@ -1,10 +1,10 @@
-# ENTSO-E date live — actualizat: 2026-08-29 12:11 UTC (15:11 ora României)
+# ENTSO-E date live — actualizat: 2026-08-29 13:11 UTC (16:11 ora României)
 
-Eolian: actual 328 MW vs prognoză N/A
-Solar: actual 2170 MW vs prognoză N/A
+Eolian: date indisponibile
+Solar: date indisponibile
 
 PZU ora curentă: indisponibil
 
 UMM nou (ultimele ~90 min): niciunul nou
 
-Status: eroare parțială — pas 3 (prognoza): eroare retea la prognoza (A69/A01): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); fallback A18: eroare retea la prognoza (A69/A18): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); pas 4 (pret PZU): eroare retea la pret PZU (A44): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30)
+Status: eroare parțială — pas 2 (actual): eroare retea la productie actuala (A75): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); pas 3 (prognoza): eroare retea la prognoza (A69/A01): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); fallback A18: eroare HTTP 503 la prognoza (A69/A18): <!doctype html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Transparency Platform</title> <style> :root{ --header-height:70px; --page-bg: linear-gradient(to right, rgb(142, 196, 182), rgb(245, 209, 110)); /* gradient p; pas 4 (pret PZU): eroare HTTP 503 la pret PZU (A44): <!doctype html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Transparency Platform</title> <style> :root{ --header-height:70px; --page-bg: linear-gradient(to right, rgb(142, 196, 182), rgb(245, 209, 110)); /* gradient p; pas 5 (UMM): eroare HTTP 503 la UMM (A80): <!doctype html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Transparency Platform</title> <style> :root{ --header-height:70px; --page-bg: linear-gradient(to right, rgb(142, 196, 182), rgb(245, 209, 110)); /* gradient p; fallback A77: eroare HTTP 503 la UMM (A77): <!doctype html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Transparency Platform</title> <style> :root{ --header-height:70px; --page-bg: linear-gradient(to right, rgb(142, 196, 182), rgb(245, 209, 110)); /* gradient p
