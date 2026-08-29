@@ -1,10 +1,10 @@
-# ENTSO-E date live — actualizat: 2026-08-29 00:10 UTC (03:10 ora României)
+# ENTSO-E date live — actualizat: 2026-08-29 01:11 UTC (04:11 ora României)
 
-Eolian: actual N/A vs prognoză 1124 MW
-Solar: actual N/A vs prognoză 1 MW
+Eolian: actual 1055 MW vs prognoză N/A
+Solar: actual 0 MW vs prognoză N/A
 
-PZU ora curentă: 133.12 EUR/MWh (ieri aceeași oră: 168.02 EUR/MWh)
+PZU ora curentă: 133.00 EUR/MWh (ieri aceeași oră: 166.19 EUR/MWh)
 
 UMM nou (ultimele ~90 min): niciunul nou
 
-Status: eroare parțială — pas 2 (actual): API eroare la productie actuala (A75): No matching data found for Data item AGGREGATED_GENERATION_PER_TYPE_R3 [16.1.B&amp;C] (10YRO-TEL------P) and interval 2026-08-29T00:00:00Z/2026-08-29T23:59:00Z.
+Status: eroare parțială — pas 3 (prognoza): eroare retea la prognoza (A69/A01): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); fallback A18: eroare HTTP 400 la prognoza (A69/A18): <?xml version="1.0" encoding="UTF-8"?> <Acknowledgement_MarketDocument xmlns="urn:iec62325.351:tc57wg16:451-1:acknowledgementdocument:7:0"> <mRID>bd8b1273-0e96-4</mRID> <createdDateTime>2026-08-29T01:11:54Z</createdDateTime> <sender_MarketParticipant.mRID codingScheme="A01">10X1001A1001A450</sender_
