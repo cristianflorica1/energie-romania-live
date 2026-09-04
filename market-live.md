@@ -1,16 +1,16 @@
-# Piata energie RO - date live, actualizat: 2026-09-04 08:21 UTC
+# Piata energie RO - date live, actualizat: 2026-09-04 09:19 UTC
 
-Consum: 4774
-Productie: 5220
+Consum: 4640
+Productie: 5163
 Nuclear: 0
-Carbune: 779
+Carbune: 641
 Hidro: 0
-Eolian: -9
-Solar: 2979
-Gaz: 1000
-Biomasa: 57
-Sold: -445
-Timestamp sursa: 26/9/4 11:18:33
+Eolian: 20
+Solar: 3122
+Gaz: 969
+Biomasa: 53
+Sold: -522
+Timestamp sursa: 26/9/4 12:17:22
 
 Istoric recent (data, pret EUR/MWh):
 - 2026-08-09: 95.15
