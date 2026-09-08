@@ -1,4 +1,4 @@
-# ENTSO-E date live — actualizat: 2026-09-08 16:21 UTC (19:21 ora României)
+# ENTSO-E date live — actualizat: 2026-09-08 17:19 UTC (20:19 ora României)
 
 Eolian: date indisponibile
 Solar: date indisponibile
@@ -7,4 +7,4 @@ PZU ora curentă: indisponibil
 
 UMM nou (ultimele ~90 min): niciunul nou
 
-Status: eroare parțială — pas 2 (actual): eroare HTTP 404 la productie actuala (A75): 404 page not found ; pas 3 (prognoza): eroare HTTP 404 la prognoza (A69/A01): 404 page not found ; fallback A18: eroare HTTP 404 la prognoza (A69/A18): 404 page not found ; pas 4 (pret PZU): eroare HTTP 404 la pret PZU (A44): 404 page not found ; pas 5 (UMM): eroare HTTP 404 la UMM (A80): 404 page not found ; fallback A77: eroare HTTP 404 la UMM (A77): 404 page not found 
+Status: eroare parțială — pas 2 (actual): eroare retea la productie actuala (A75): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); pas 3 (prognoza): eroare retea la prognoza (A69/A01): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); fallback A18: eroare retea la prognoza (A69/A18): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); pas 4 (pret PZU): eroare retea la pret PZU (A44): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); pas 5 (UMM): eroare retea la UMM (A80): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); fallback A77: eroare retea la UMM (A77): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30)
