@@ -1,10 +1,10 @@
-# ENTSO-E date live — actualizat: 2026-09-08 20:19 UTC (23:19 ora României)
+# ENTSO-E date live — actualizat: 2026-09-08 21:17 UTC (00:17 ora României)
 
-Eolian: actual 67 MW vs prognoză 839 MW (deviație -92.0%, presiune de creștere preț (actual sub prognoză))
-Solar: actual 2534 MW vs prognoză 2 MW (deviație +102908.1%, presiune de scădere preț (actual peste prognoză))
+Eolian: date indisponibile
+Solar: date indisponibile
 
-PZU ora curentă: 250.55 EUR/MWh (ieri aceeași oră: 256.93 EUR/MWh)
+PZU ora curentă: indisponibil
 
 UMM nou (ultimele ~90 min): niciunul nou
 
-Status: OK
+Status: eroare parțială — pas 2 (actual): eroare retea la productie actuala (A75): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); pas 3 (prognoza): eroare retea la prognoza (A69/A01): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); fallback A18: eroare retea la prognoza (A69/A18): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); pas 4 (pret PZU): eroare retea la pret PZU (A44): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); pas 5 (UMM): eroare retea la UMM (A80): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30); fallback A77: eroare retea la UMM (A77): HTTPSConnectionPool(host='web-api.tp.entsoe.eu', port=443): Read timed out. (read timeout=30)
