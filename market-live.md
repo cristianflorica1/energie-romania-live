@@ -1,8 +1,7 @@
-# Piata energie RO - date live, actualizat: 2026-09-09 21:19 UTC
+# Piata energie RO - date live, actualizat: 2026-09-09 22:19 UTC
 
 Mix energetic: indisponibil
 
-Pret PZU (day-ahead): 202.46 EUR/MWh
 Istoric recent (data, pret EUR/MWh):
 - 2026-08-14: 142.91
 - 2026-08-13: 163.54
