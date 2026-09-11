@@ -1,9 +1,9 @@
-# ENTSO-E date live — actualizat: 2026-09-11 11:18 UTC (14:18 ora României)
+# ENTSO-E date live — actualizat: 2026-09-11 12:24 UTC (15:24 ora României)
 
-Eolian: actual 255 MW vs prognoză 388 MW (deviație -34.3%, presiune de creștere preț (actual sub prognoză))
-Solar: actual 2940 MW vs prognoză 3306 MW (deviație -11.1%, neutru)
+Eolian: actual 336 MW vs prognoză 467 MW (deviație -28.0%, presiune de creștere preț (actual sub prognoză))
+Solar: actual 2770 MW vs prognoză 2973 MW (deviație -6.8%, neutru)
 
-PZU ora curentă: 171.29 EUR/MWh (ieri aceeași oră: 134.12 EUR/MWh)
+PZU ora curentă: 168.59 EUR/MWh (ieri aceeași oră: 114.96 EUR/MWh)
 
 UMM nou (ultimele ~90 min): niciunul nou
 
