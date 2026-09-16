@@ -1,16 +1,16 @@
-# Piata energie RO - date live, actualizat: 2026-09-16 18:21 UTC
+# Piata energie RO - date live, actualizat: 2026-09-16 19:18 UTC
 
-Consum: 6695
-Productie: 5156
+Consum: 6059
+Productie: 4726
 Nuclear: 0
-Carbune: 1022
-Hidro: 14
-Eolian: 612
-Solar: -13
-Gaz: 1355
-Biomasa: 45
-Sold: 1538
-Timestamp sursa: 26/9/16 21:19:42
+Carbune: 1025
+Hidro: 74
+Eolian: 638
+Solar: -14
+Gaz: 1375
+Biomasa: 47
+Sold: 1332
+Timestamp sursa: 26/9/16 22:15:48
 
 Pret PZU (day-ahead): 169.19 EUR/MWh
 Istoric recent (data, pret EUR/MWh):
