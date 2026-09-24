@@ -1,16 +1,6 @@
-# Piata energie RO - date live, actualizat: 2026-09-24 14:55 UTC
+# Piata energie RO - date live, actualizat: 2026-09-24 19:01 UTC
 
-Consum: 6081
-Productie: 4461
-Nuclear: 0
-Carbune: 520
-Hidro: 44
-Eolian: 139
-Solar: 683
-Gaz: 1465
-Biomasa: 51
-Sold: 1620
-Timestamp sursa: 26/9/24 17:52:58
+Mix energetic: indisponibil
 
 Pret PZU (day-ahead): 219.85 EUR/MWh
 Istoric recent (data, pret EUR/MWh):
@@ -19,4 +9,4 @@ Istoric recent (data, pret EUR/MWh):
 - 2026-08-27: 174.58
 - 2026-08-26: 186.50
 
-Status: OK
+Status: eroare partiala - consumenergie.ro: eroare retea la consumenergie.ro: HTTPSConnectionPool(host='consumenergie.ro', port=443): Max retries exceeded with url: /api/sen (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))
