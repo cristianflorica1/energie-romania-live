@@ -1,9 +1,9 @@
-# ENTSO-E date live — actualizat: 2026-10-06 00:44 UTC (03:44 ora României)
+# ENTSO-E date live — actualizat: 2026-10-06 07:28 UTC (10:28 ora României)
 
 Eolian: date indisponibile
 Solar: date indisponibile
 
-PZU ora curentă: 217.92 EUR/MWh (ieri aceeași oră: 189.56 EUR/MWh)
+PZU ora curentă: 259.00 EUR/MWh (ieri aceeași oră: 235.12 EUR/MWh)
 
 UMM nou (ultimele ~90 min): niciunul nou
 
