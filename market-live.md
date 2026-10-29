@@ -1,16 +1,16 @@
-# Piata energie RO - date live, actualizat: 2026-10-29 14:08 UTC
+# Piata energie RO - date live, actualizat: 2026-10-29 20:13 UTC
 
-Consum: 7135
-Productie: 5705
+Consum: 6440
+Productie: 5471
 Nuclear: 0
-Carbune: 650
-Hidro: 309
-Eolian: 1677
-Solar: 146
+Carbune: 646
+Hidro: 247
+Eolian: 1701
+Solar: -13
 Gaz: 1501
 Biomasa: 70
-Sold: 1430
-Timestamp sursa: 26/10/29 16:07:00
+Sold: 969
+Timestamp sursa: 26/10/29 22:10:39
 
 Pret PZU: indisponibil
 
