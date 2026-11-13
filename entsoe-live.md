@@ -1,4 +1,4 @@
-# ENTSO-E date live — actualizat: 2026-11-13 07:47 UTC (10:47 ora României)
+# ENTSO-E date live — actualizat: 2026-11-13 16:08 UTC (19:08 ora României)
 
 Eolian: date indisponibile
 Solar: date indisponibile
