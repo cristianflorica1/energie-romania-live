@@ -1,4 +1,4 @@
-# Piata energie RO - date live, actualizat: 2026-11-24 05:54 UTC
+# Piata energie RO - date live, actualizat: 2026-11-24 17:30 UTC
 
 Mix energetic: indisponibil
 
